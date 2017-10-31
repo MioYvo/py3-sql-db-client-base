@@ -1,5 +1,5 @@
 import cx_Oracle
 
-dsn = cx_Oracle.makedsn("host", "port", "xe")
-db = cx_Oracle.connect('system', 'oracle', dsn)
-print(db.version)
+dsn = cx_Oracle.makedsn(host="host", port="port", sid="xe")
+with cx_Oracle.connect(user='system', password='oracle', dsn=dsn) as conn:
+    print(conn.version)

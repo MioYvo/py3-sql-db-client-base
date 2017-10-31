@@ -5,6 +5,9 @@ COPY instantclient/* /tmp/
 # Apt China mirror
 # COPY sources.list.jessie /etc/apt/sources.list
 
+# fix pymssql error: sqlfront.h: No such file or directory
+ENV PYMSSQL_BUILD_WITH_BUNDLED_FREETDS=1
+
 RUN apt-get update && apt-get install -y alien libaio1 && \
     alien -iv /tmp/oracle-instantclient12.2-basiclite-12.2.0.1.0-1.x86_64.rpm && \
     alien -iv /tmp/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm && \

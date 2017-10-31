@@ -2,6 +2,6 @@
 
 **Modified from [hjaf23/cx_oracle](https://hub.docker.com/r/hjaf23/cx_oracle/).**
 
-python:3.6.3-slim-jessie image installed cx_Oracle for Oracle Database with oracle instant client 12.1, PyMySQL for MySQL and MariaDB, pymssql for Microsoft SQL Server.
+This image installed 3 python packages (cx_Oracle, PyMySQL, pymssql), based on python:3.6.3-slim-jessie image, installed cx_Oracle(Oracle Instant Client 12.1) for Oracle Database, PyMySQL for MySQL and MariaDB, pymssql for Microsoft SQL Server.
 
 Oracle Instant Client license: http://www.oracle.com/technetwork/licenses/distribution-license-152002.html
